@@ -6,7 +6,7 @@ const shops = async (req, res) => {
   const query = new URLSearchParams();
   query.set('key', HOTPEPPER_API_KEY);
   query.set('format', 'json');
-  query.set('large_area', req.query.large_area || 'Z011');
+  query.set('large_area', req.query.large_area || 'Z098');
   if (req.query.keyword) query.set('keyword', req.query.keyword);
 
   const response = await fetch(`https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?${query.toString()}`);
